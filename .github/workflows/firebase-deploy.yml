@@ -15,14 +15,14 @@ jobs:
       # Install Node.js
       - uses: actions/setup-node@v3
         with:
-          node-version: "20" # or whatever version you prefer
+          node-version: "20"
 
       # Install Firebase CLI
       - run: npm install -g firebase-tools
 
-      # Authenticate Firebase
-      - uses: FirebaseExtended/action-hosting-deploy@v1
+      # Deploy to Firebase Hosting
+      - uses: FirebaseExtended/action-hosting-deploy@v1.2.0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          projectId: "safe-drive-00" # replace with your actual Firebase project ID
-          channelId: "live" # live is production
+          projectId: "safe-drive-00" # replace with your Firebase project ID
+          channelId: "live"
