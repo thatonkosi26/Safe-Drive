@@ -9,25 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Debug - List all files
-        run: |
-          echo "Current directory: $(pwd)"
-          echo "Files in repository:"
-          ls -la
-          echo "Looking for package.json..."
-          find . -name "package.json" -type f
-          echo "Looking for firebase.json..."
-          find . -name "firebase.json" -type f
-      
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./frontend  # Change this based on debug output
-      
-      - name: Build project
-        run: npm run build
-        working-directory: ./frontend  # Change this based on debug output
-      
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
