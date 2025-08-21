@@ -15,28 +15,36 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20  # change if needed
+          node-version: 20
 
-      # 3. Ensure lockfile exists and install dependencies
-      - name: Generate lockfile if missing
+      # 3. Ensure lockfile exists
+      - name: Ensure package-lock.json exists
+        working-directory: ./Safe-Drive
         run: |
           if [ ! -f package-lock.json ]; then
             echo "No package-lock.json found. Generating..."
             npm install --package-lock-only
           fi
 
-      # 4. Clean install with npm ci
+      # 4. Install dependencies using npm ci
       - name: Install dependencies
+        working-directory: ./Safe-Drive
         run: npm ci
 
       # 5. Build the project
       - name: Build project
+        working-directory: ./Safe-Drive
         run: npm run build
 
-      # 6. Deploy to Firebase
+      # 6. Install Firebase CLI (optional, only if needed)
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      # 7. Deploy to Firebase Hosting
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SAFE_DRIVE_00 }}
           channelId: live
           projectId: safe-drive-00
+          working-directory: ./Safe-Drive
