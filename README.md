@@ -1,6 +1,6 @@
-# SafeRide – Web App (PWA)
+# SafeDrive – Web App (PWA)
 
-**SafeRide** is a **Vanilla JavaScript Progressive Web App (PWA)** designed to improve commuter safety in South Africa and beyond.  
+**SafeDrive** is a **Vanilla JavaScript Progressive Web App (PWA)** designed to improve commuter safety in South Africa and beyond.  
 It allows users to **report incidents**, **raise SOS alerts**, and **view danger hotspots on a live map**, easing tensions between ride-hailing services (Uber/Bolt) and traditional taxis.
 
 Built with **HTML, CSS, JavaScript, and Firebase**, the app is lightweight, mobile-first, and works offline once installed as a PWA.
