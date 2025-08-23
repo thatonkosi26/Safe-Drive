@@ -254,10 +254,8 @@ nav > div {
     align-items: center;
     text-align: center;
     background: white;
-    margin-top: 520px;
-    padding-left: 15%;
-    padding-right: 15%;
-  }
+    padding: 60px 15%; /* vertical + horizontal padding */
+}
 
   #about-section h1 {
     font-size: 60px;
