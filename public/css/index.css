@@ -6,9 +6,8 @@
 }
 
 body {
-    min-height: 100vh; /* make sure body spans full viewport */
-    background: url("../resources/background-image.jpg") center/cover no-repeat;
-    /* no z-index needed */
+    min-height: 100%;
+    background: none; /* let html background show */
 }
 
 /* --- NAVIGATION BAR --- */
@@ -60,6 +59,7 @@ nav > div {
 #navbar-contents a {
     text-decoration: none;
     color: black;
+    font-weight: 600;
 }
 
 /* From Uiverse.io by BHARGAVPATEL1244 */ 
@@ -170,10 +170,15 @@ nav > div {
 
 /* --- CONTENTS OF THE LANDING PAGE --- */
 #app-description {
+    background: url("../resources/background-image.jpg") center/cover no-repeat;
+    background-size: cover;
+    min-height: 100vh; /* make landing section full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center text */
     align-items: center;
     text-align: center;
-    color: black; /* optional: text color for contrast */
-    margin-top: 120px; /* push below navbar */
+    color: black;
 }
 
 #app-description h1 {
@@ -239,4 +244,23 @@ nav > div {
   
   .cssbuttons-io-button:active .icon {
     transform: scale(0.95);
+  }
+
+  /* --- ABOUT SECTION --- */
+  #about-section {
+    align-items: center;
+    text-align: center;
+    background: white;
+    margin-top: 520px;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #about-section h1 {
+    font-size: 60px;
+  }
+
+  #about-section p {
+    font-size: 20px;
+    margin-top: 60px;
   }
