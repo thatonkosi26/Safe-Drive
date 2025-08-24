@@ -333,3 +333,121 @@ nav > div {
   /*     margin-inline: -1.5rem; */
     }
   }
+
+  /* --- FOOTER --- */
+  footer {
+    background-color: #121315;
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 160px;
+  }
+
+  footer * {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+  .row {
+    padding: 2em 1em;
+  }
+  .row.primary {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: stretch;
+  }
+  .column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+  }
+  h3 {
+    width: 100%;
+    text-align: left;
+    color: #3c6efc;
+    font-size: 1.6em;
+    white-space: nowrap;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  li:not(:first-child) {
+    margin-top: 0.8em;
+  }
+  ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  ul li a:hover {
+    color: #3c6efc;
+  }
+  .about p {
+    text-align: justify;
+    line-height: 2;
+    margin: 0;
+  }
+  input,
+  #report-btn {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  #report-btn {
+    background-color: #3c6efc;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  div.social {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+  }
+  div.social i{
+    cursor: pointer;
+  }
+  .social i:hover {
+    color: #3c6efc;
+  }
+  .row.secondary {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .row.secondary i {
+    font-size: 1.8em;
+    color: #3c6efc;
+    cursor: pointer;
+  }
+  .row.secondary div {
+    padding: 1em 0;
+    width: 100%;
+  }
+  /*.row.secondary div:hover {
+    background-color: #25262e;
+  }*/
+  .copyright {
+    padding: 0.3em 1em;
+    background-color: #25262e;
+  }
+  .copyright p {
+    font-size: 0.9em;
+    text-align: center;
+  }
+  @media screen and (max-width: 850px) {
+    .row.primary {
+      grid-template-columns: 1fr;
+    }
+    .row.secondary {
+      flex-direction: column;
+    }
+  }
