@@ -9,7 +9,7 @@
 
 <nav>
   <div id="logo">
-    <img src="../resources/safedrive-logo.jpg" alt="logo">
+    <img src="../resources/safedrive-logo.jpg" alt="logo" >
     <h3>SafeDrive</h3>
   </div>
 
@@ -162,5 +162,15 @@
       </div>
     </footer>
   </footer>
+
+  <script>
+    document.getElementById("loginBtn").addEventListener("click", () => {
+      window.location.href = "../html/login.html"; // change route
+    });
+  
+    document.getElementById("signUpBtn").addEventListener("click", () => {
+      window.location.href = "../html/signup.html"; // change route
+    });
+  </script>
 </body>
 </html>
